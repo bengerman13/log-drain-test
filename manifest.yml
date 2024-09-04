@@ -1,0 +1,10 @@
+---
+applications:
+- name: log-sync-test
+  random-route: true
+  buildpacks:
+    - python_buildpack
+  memory: 256M
+  stack: cflinuxfs4
+  env:
+    GUNICORN_CMD_ARGS: '--disable-redirect-access-to-syslog'
